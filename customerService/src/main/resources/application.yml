@@ -1,0 +1,42 @@
+server:
+  port: 8082 # 服务消费者端口
+
+spring:
+  application:
+    name: customer-service # 服务名
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848 # Nacos 服务器地址
+        namespace: public # 命名空间，默认为 public
+        group: DEFAULT_GROUP # 分组，默认为 DEFAULT_GROUP
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090 # Dashboard 的地址
+        username: admin # Dashboard 用户名 (如果设置了)
+        password: admin # Dashboard 密码 (如果设置了)
+  thymeleaf:
+    cache: true
+    prefix: classpath:/templates/
+    suffix: .html
+    check-template: true
+    check-template-location: true
+    enabled: true
+    encoding: UTF-8
+    mode: HTML
+    servlet:
+      content-type: text/html
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' # 暴露所有监控端点，方便Dashboard查看
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  file:
+    name: D:/logs/${spring.application.name}.log
