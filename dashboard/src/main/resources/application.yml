@@ -9,3 +9,12 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
         # Dashboard 不需要客户端配置，因为它是服务器端
+  boot:
+    admin:
+      ui:
+        title: "我的监控中心"
+        brand: "<img src=\"assets/img/icon-spring-boot-admin.svg\"><span>我的监控中心（Spring Boot Admin）</span>"
+
+logging:
+  file:
+    name: D:/logs/${spring.application.name}.log
