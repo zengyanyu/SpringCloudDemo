@@ -4,7 +4,7 @@ import org.springframework.boot.actuate.health.AbstractHealthIndicator;
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.stereotype.Component;
 
-// 类名必须是XxxxxHealthIndicator
+// 自定义健康指标，类名必须是XxxxxHealthIndicator
 @Component
 public class CustomerCustomHealthIndicator extends AbstractHealthIndicator {
     @Override
