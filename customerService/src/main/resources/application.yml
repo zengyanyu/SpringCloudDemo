@@ -19,7 +19,6 @@ spring:
         file-extension: yml # 文件后缀名，默认为properties，这里使用yml格式
         group: DEFAULT_GROUP        # 默认为DEFAULT_GROUP，可以根据需要自定义分组
 #        namespace: namespace-id     # 命名空间ID，默认为public，可以不设置
-
   boot:
     admin:
       client:
