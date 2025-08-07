@@ -12,14 +12,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
-public class CustomerInfo implements InfoContributor {
+public class ConsumerInfo implements InfoContributor {
 
     private SimpleDateFormat SIMPLE_DATE_FORMAT;
 
     private JavaInfo javaInfo;
     private OsInfo osInfo;
 
-    public CustomerInfo() {
+    public ConsumerInfo() {
         this.javaInfo = new JavaInfo();
         this.osInfo = new OsInfo();
         SIMPLE_DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -29,7 +29,7 @@ public class CustomerInfo implements InfoContributor {
     public void contribute(Info.Builder builder) {
         Map<String, Object> map = new HashMap<>();
         map.put("贡献者", "衍育");
-        map.put("服务名称", "customer-service");
+        map.put("服务名称", "consumer-service");
         map.put("描述", "Service Consumer");
         map.put("当前日期", SIMPLE_DATE_FORMAT.format(new Date()));
         map.put("java信息", this.javaInfo);

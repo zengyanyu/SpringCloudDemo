@@ -9,8 +9,8 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>customer-service</artifactId>
-    <name>customer-service</name>
+    <artifactId>consumer-service</artifactId>
+    <name>consumer-service</name>
     <description>Service Consumer</description>
 
     <dependencies>

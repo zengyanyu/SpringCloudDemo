@@ -5,7 +5,7 @@ spring:
   config:
     import: optional:nacos:${spring.application.name}.yml #引入nacos的配置文件
   application:
-    name: customer-service # 服务名
+    name: consumer-service # 服务名
   cloud:
     nacos:
       discovery:

@@ -1,6 +1,6 @@
-package com.example.customer.web;
+package com.example.consumer.web;
 
-import com.example.customer.feign.ProviderClient;
+import com.example.consumer.feign.ProviderClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,11 +23,11 @@ public class WebController {
         return "result"; // 返回 result.html 模板
     }
 
-    // 调用Customer
-    @GetMapping("/call-customer/{name}")
-    public String callCustomer(@PathVariable String name, Model model) {
+    // 调用consumer
+    @GetMapping("/call-consumer/{name}")
+    public String callConsumer(@PathVariable String name, Model model) {
         model.addAttribute("message", "hello: " + name);
-        model.addAttribute("service", "Customer Service");
+        model.addAttribute("service", "Consumer Service");
         return "result"; // 返回 result.html 模板
     }
 }

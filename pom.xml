@@ -30,7 +30,7 @@
 
     <modules>
         <module>providerService</module>
-        <module>customerService</module>
+        <module>consumerService</module>
         <module>dashboard</module>
     </modules>
 
