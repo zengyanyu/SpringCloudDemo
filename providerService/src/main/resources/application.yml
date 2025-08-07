@@ -2,6 +2,9 @@ server:
   port: 8081 # 服务提供者端口
 
 spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   config:
     import: optional:nacos:${spring.application.name}.yml #引入nacos的配置文件
   application:

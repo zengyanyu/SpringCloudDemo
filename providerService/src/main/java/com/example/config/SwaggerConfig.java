@@ -28,24 +28,15 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("系统API接口")
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.consumer.web"))
+                .apis(RequestHandlerSelectors.basePackage("com.example.controller"))
                 .build().apiInfo(apiInfo());
     }
-
-//    @Bean
-//    public Docket docketBusiness() {
-//        return new Docket(DocumentationType.SWAGGER_2)
-//                .groupName("业务API接口")
-//                .select()
-//                .apis(RequestHandlerSelectors.basePackage("com.example.web"))
-//                .build().apiInfo(apiInfo());
-//    }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("SpringBoot项目API文档")
                 .description("API文档详细描述")
-                .termsOfServiceUrl("http://localhost:8082/doc.html")// 服务URL
+                .termsOfServiceUrl("http://localhost:8081/doc.html")// 服务URL
                 .version("1.0.0")
                 .contact(new Contact("曾衍育", "http://example.com", "1194314874@qq.com"))
                 .build();
