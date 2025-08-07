@@ -27,6 +27,5 @@ public class ProviderController {
     @GetMapping("/getServiceName")
     public String getServiceName() {
         return "从nacos获取到provider-service.yml配置文件的信息-服务名称：" + serviceName;
-
     }
 }
